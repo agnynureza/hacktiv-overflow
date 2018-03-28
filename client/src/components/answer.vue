@@ -88,6 +88,11 @@ export default {
         // this.allAnswer = data.data.data
       })
     }
+  },
+  beforeCreate: function () {
+    if (localStorage.getItem('token') === null) {
+      this.$router.push('/')
+    }
   }
 }
 </script>
